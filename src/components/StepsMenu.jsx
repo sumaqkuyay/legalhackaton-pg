@@ -13,8 +13,7 @@ export class StepsMenu extends Component {
         <div className="home-card" hidden={step === 1 ? false : true }>
           <div className="">
             <p className="h1-style">Hola, soy Temis :) ¡Siempre dispuesta a ayudarte!</p>
-            <p className="h2-style">Selecciona una de estas dos Entidades Legales  para realizar el Programa de
-Cumplimiento respectivo.</p>
+            <p className="h2-style">Selecciona una entidad legal.</p>
           </div>
           <div className="button-div">
             <button className="home-button" type="button" onClick={nextStep} >
@@ -35,8 +34,8 @@ Cumplimiento respectivo.</p>
             <p className="txt-btn-form">P&G PERÚ</p>
           </div>
           <div className="App">
-            <p className="h1-style">Ahora elije el tipo de responsabilidad a cumplir .</p>
-            <p className="h2-style">Selecciona un tipo de responsabilidad en el que quieres que te ayude.</p>
+            <p className="h1-style">Ahora elige el tipo de responsabilidad a cumplir.</p>
+            <p className="h2-style">Selecciona un tipo de responsabilidad con la que quieres que te ayude.</p>
           </div>
           <div className="button-div">
             <button className="home-button" type="button" onClick={nextStep} >
@@ -62,7 +61,7 @@ Cumplimiento respectivo.</p>
           <div className="button-div">
             <Link to="/materials">
             <button className="home-button" type="button" onClick={nextStep} >
-              <p className="txt-btn-form">ENTRENAMIENTO COORPORATIVO</p>
+              <p className="txt-btn-form">ENTRENAMIENTO CORPORATIVO</p>
             </button>
             </Link>
             <button className="home-button" type="button" >

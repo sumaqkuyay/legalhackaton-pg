@@ -16,7 +16,7 @@ export class MaterialCard extends Component {
             <div className="materials-card-body">
               <div className="materials-card-information">
               <div className="materials-card-body-text">
-                <p className="h1-style">Materias de Entrenamiento Coorporativo</p>
+                <p className="h1-style">Materias de Entrenamientos Corporativos</p>
                 <p className="h2-style">En esta sección, puedes crear materias nuevas en caso necesites. 
                   Además, soy tan flexible, que puedes agregar todas las que necesitas. </p>
               </div>
