@@ -10,7 +10,7 @@ export class StepsMenu extends Component {
     const { nextStep, prevStep, step } = this.props;
     return (
       <>
-        <div className="prueba" hidden={step === 1 ? false : true }>
+        <div className="home-card" hidden={step === 1 ? false : true }>
           <div className="">
             <p className="h1-style">Hola, soy Temis :) ¡Siempre dispuesta a ayudarte!</p>
             <p className="h2-style">Selecciona una de estas dos Entidades Legales  para realizar el Programa de
@@ -27,7 +27,7 @@ Cumplimiento respectivo.</p>
           <br />
         </div>
 
-        <div className="prueba" hidden={step === 2 ? false : true }>
+        <div className="home-card" hidden={step === 2 ? false : true }>
           <div className="">
             <button className="btn btn-danger btn-form" onClick={prevStep}>
               <img src={btnBack} className="icon-back-form" alt="icon-back-form" />
@@ -48,7 +48,7 @@ Cumplimiento respectivo.</p>
           </div>
         </div>
 
-        <div className="prueba" hidden={step === 3 ? false : true }>
+        <div className="home-card" hidden={step === 3 ? false : true }>
           <div className="">
             <button className="btn btn-danger btn-form" onClick={prevStep}>
               <img src={btnBack} className="icon-back-form" alt="icon-back-form" />
