@@ -1,11 +1,43 @@
-import React from 'react';
-// import { Link } from 'react-router-dom';
+import React, { Component }from 'react';
+import StepsMenu from '../components/StepsMenu';
 
-const Home = () => (
-  <div className="wallpaper">
-    <div className="main-home-container">
-      <aside className="sidebar">Temis, tu asistente legal</aside>
-    </div>
-  </div>
-);
+export class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      newPreference:'',
+      changeState: true,
+      step: 1,
+    };
+  }
+
+  nextStep = () => {
+    let { step } = this.state;
+    step = step + 1;
+    this.setState({ step });
+  };
+
+  prevStep = () => {
+    let { step } = this.state;
+    step = step - 1;
+    this.setState({ step });
+  };
+  render() {
+    const {step} = this.state;
+    return (
+      <div className="home">
+        <div className="wallpaper">
+          <div className="main-home-container">
+            <aside className="sidebar">Temis, tu asistente legal</aside>
+          </div>
+        </div>
+       <StepsMenu
+          prevStep={this.prevStep}
+          nextStep={this.nextStep}
+          step={step}
+       />
+      </div>
+    );
+  }
+}
 export default Home;
