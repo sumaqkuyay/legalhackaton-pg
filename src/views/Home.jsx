@@ -29,13 +29,13 @@ export class Home extends Component {
         <div className="wallpaper">
           <div className="main-home-container">
             <aside className="sidebar">Temis, tu asistente legal</aside>
-          </div>
-        </div>
-       <StepsMenu
+            <StepsMenu
           prevStep={this.prevStep}
           nextStep={this.nextStep}
           step={step}
        />
+          </div>
+        </div>
       </div>
     );
   }

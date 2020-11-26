@@ -9,6 +9,7 @@ $white:#FFFFFF;
 //Views:
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700;900&display=swap');
 @import "./styleComponents/Home";
+@import "./styleComponents/StepsMenu";
 
 //General styles:
 
@@ -18,7 +19,16 @@ $white:#FFFFFF;
     box-sizing: border-box;
   }
   
-  body {
-    font-family: 'Montserrat', sans-serif;
-  }
-    
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.h1-style{
+  font-weight: 900;
+  font-size: 24px;
+  padding-bottom: 30px;
+}
+
+.h2-style{
+  font-size: 15px;
+}
