@@ -25,13 +25,18 @@ export class Home extends Component {
   render() {
     const {step} = this.state;
     return (
-      <header className="head-waiter">
-       <StepsMenu
+      <div className="home">
+        <div className="wallpaper">
+          <div className="main-home-container">
+            <aside className="sidebar">Temis, tu asistente legal</aside>
+            <StepsMenu
           prevStep={this.prevStep}
           nextStep={this.nextStep}
           step={step}
        />
-      </header>
+          </div>
+        </div>
+      </div>
     );
   }
 }

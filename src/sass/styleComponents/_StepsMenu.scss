@@ -1,0 +1,30 @@
+.first-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-card{
+    margin-top: 50px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    display: flex;
+}
+.home-card-container{
+    padding: 5%;
+}
+.button-div{
+    margin:auto;
+    text-align: center;
+}
+.home-button{
+    border-radius: 8px;
+    margin-top: 64px;
+    padding: 30px;
+    justify-content: center;
+    text-decoration: none;
+    color: $black;
+    background-color: $yellow;
+    border: transparent;
+    width: 346px;
+    height: 90px;
+}

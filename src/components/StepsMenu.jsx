@@ -10,17 +10,21 @@ export class StepsMenu extends Component {
     const { nextStep, prevStep, step } = this.props;
     return (
       <>
-        <div className="form-container" hidden={step === 1 ? false : true }>
-          <div className="App">
-            <h1 className="mb-5">Hola, soy Temis :) ¡Siempre dispuesta a ayudarte!</h1>
-            <p className="txt-info-register">Selecciona una de estas dos Entidades Legales  para realizar el Programa de
-Cumplimiento respectivo.</p>
-            <button className="btn btn-order" type="button" onClick={nextStep} >
-              <p className="txt-btn-form">398-P&G PERÚ</p>
-            </button>
-            <button className="btn btn-order" type="button" >
-              <p className="txt-btn-form">785-P&G INDUSTRIAL</p>
-            </button>
+        <div className="first-card" hidden={step === 1 ? false : true }>
+          <div className="home-card">
+            <div className="home-card-container">
+            <p className="h1-style">Hola, soy Temis :) ¡Siempre dispuesta a ayudarte!</p>
+            <p className="h2-style">Selecciona una de estas dos Entidades Legales 
+            para realizar el Programa de Cumplimiento respectivo.</p>
+            <div className="button-div">
+              <button className="home-button" type="button" onClick={nextStep} >
+                <p className="txt-btn-form">398-P&G PERÚ</p>
+              </button>
+              <button className="home-button" type="button" >
+                <p className="txt-btn-form">785-P&G INDUSTRIAL</p>
+              </button>
+            </div>
+            </div>
           </div>
           <br />
         </div>
