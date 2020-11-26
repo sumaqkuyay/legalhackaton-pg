@@ -18,7 +18,7 @@
 }
 .home-button{
     border-radius: 8px;
-    margin-top: 64px;
+    margin-top: 60px;
     padding: 30px;
     justify-content: center;
     text-decoration: none;
@@ -27,4 +27,12 @@
     border: transparent;
     width: 346px;
     height: 90px;
+}
+.home-header{
+    display: -webkit-box;
+}
+.icon-back{
+    text-decoration: none;
+    background-color: transparent;
+    border: transparent;
 }

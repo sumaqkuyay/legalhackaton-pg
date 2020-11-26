@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import btnBack from '../images/btn_back.png';
+import migajaback from '../images/migaja-back.svg';
 
 export class StepsMenu extends Component {
 
@@ -29,50 +29,50 @@ export class StepsMenu extends Component {
           <br />
         </div>
     
-        <div className="form-container" hidden={step === 2 ? false : true }>
-          <div className="">
-            <button className="btn btn-danger btn-form" onClick={prevStep}>
-              <img src={btnBack} className="icon-back-form" alt="icon-back-form" />
-            </button>
-            <p className="txt-btn-form">P&G PERÚ</p>
-          </div>
-          <div className="App">
-            <h1 className="mb-5">Ahora elije el tipo de responsabilidad a cumplir .</h1>
-            <p className="txt-info-register">Selecciona un tipo de responsabilidad en el que quieres que te ayude.</p>
-          </div>
-          <div className="div-btn btn-dorwn">
-            <div className="">
-              <button className="btn btn-order" type="button" onClick={nextStep} >
-                <p className="txt-btn-form">Entrenamientos</p>
+        <div className="first-card" hidden={step === 2 ? false : true }>
+          <div className="home-card">
+            <div className="home-header">
+              <button className="icon-back" onClick={prevStep}>
+                <img src={migajaback} className="" alt="icon-back-form" />
               </button>
-              <button className="btn btn-order" type="button" >
-                <p className="txt-btn-form">Obligaciones</p>
+              <p className="h2-style">P&G PERÚ</p>
+            </div>
+            <div className="home-card-container">
+            <p className="h1-style">Ahora elije el tipo de responsabilidad a cumplir.</p>
+            <p className="h2-style">Selecciona un tipo de responsabilidad en el que quieres que te ayude.</p>
+            <div className="button-div">
+              <button className="home-button" type="button" onClick={nextStep} >
+                <p className="txt-btn-form">ENTRENAMIENTOS</p>
               </button>
+              <button className="home-button" type="button" >
+                <p className="txt-btn-form">OBLIGACIONES</p>
+              </button>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="form-container" hidden={step === 3 ? false : true }>
-        <div className="">
-            <button className="btn btn-danger btn-form" onClick={prevStep}>
-              <img src={btnBack} className="icon-back-form" alt="icon-back-form" />
+        <div className="first-card" hidden={step === 3 ? false : true }>
+        <div className="home-card">
+        <div className="home-header">
+            <button className="icon-back" onClick={prevStep}>
+              <img src={migajaback} className="" alt="icon-back-form" />
             </button>
-            <p className="txt-btn-form">ENTRENAMIENTOS</p>
+            <p className="h2-style">ENTRENAMIENTOS</p>
           </div>
-          <div className="App">
-            <h1 className="mb-5">¡Perfecto! Ahora indica el tipo de entrenamiento </h1>
-            <p className="txt-info-register">Escoge un tipo de entrenamiento y continuemos. :D</p>
-          </div>
-          <div className="div-btn btn-dorwn">
-            <div className="">
+          <div className="home-card-container">
+            <p className="h1-style">¡Perfecto! Ahora indica el tipo de entrenamiento </p>
+            <p className="h2-style">Escoge un tipo de entrenamiento y continuemos. :D</p>
+          <div className="button-div">
               <Link to="/materials">
-              <button className="btn btn-order" type="button" onClick={nextStep} >
+              <button className="home-button" type="button" onClick={nextStep} >
                 <p className="txt-btn-form">ENTRENAMIENTO COORPORATIVO</p>
               </button>
               </Link>
-              <button className="btn btn-order" type="button" >
+              <button className="home-button" type="button" >
                 <p className="txt-btn-form">ENTRENAMIENTO LEGAL</p>
               </button>
+              </div>
             </div>
           </div>
         </div> 
