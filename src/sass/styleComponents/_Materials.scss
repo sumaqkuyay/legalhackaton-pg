@@ -1,0 +1,31 @@
+.materials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+.materials-container{
+    margin-top: 50px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    display: flex;
+}
+.materials-card-header{
+    display: flex;
+    font-size: 12px;
+    font-weight: bold;
+    justify-content: space-between;
+    width: 40%;
+    margin: 40px;
+}
+.materials-card-body{
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+.materials-card-information{
+    display: flex;
+}
+.materials-card-materia-div{
+    background-color: $grey;
+}
