@@ -3,7 +3,9 @@ import React from 'react';
 
 const Home = () => (
   <div className="wallpaper">
-    <section className="sidebar">Temis, tu asistente legal</section>
+    <div className="main-home-container">
+      <aside className="sidebar">Temis, tu asistente legal</aside>
+    </div>
   </div>
 );
 export default Home;
