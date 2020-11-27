@@ -4,6 +4,7 @@ import {
 } from 'react-router-dom';
 import Home from './views/Home';
 import Materials from './views/Materials';
+import SubMaterials from './views/SubMaterials';
 import CreatedTraining from './views/CreatedTraining';
 import './sass/index.scss';
 
@@ -13,6 +14,7 @@ const App = () => (
       <Switch>
         <Route path="/home" component={Home} />
         <Route path="/materials" component={Materials} />
+        <Route path="/submaterials" component={SubMaterials} />
         <Route path="/created-training" component={CreatedTraining} />
       </Switch>
     </HashRouter>

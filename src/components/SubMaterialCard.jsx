@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import CreateMaterial from '../components/CreateMaterial';
+import CreateSubMaterial from '../components/CreateSubMaterial';
 import migajita from '../images/migajita.svg';
 import materialfile from '../images/material-file.svg';
 
-export class MaterialCard extends Component {
+export class SubMaterialCard extends Component {
   render() {
     // eslint-disable-next-line react/prop-types
-    const { showStatus, toogleCreateMaterialModal, onChangeMaterial, addNewMaterial, materialList } = this.props;
+    const { showStatus, toogleCreateSubMaterialModal, onChangeSubMaterial, addNewSubMaterial, submaterialList } = this.props;
     
     return(
 
@@ -15,25 +15,24 @@ export class MaterialCard extends Component {
         <div className="materials-card">
           <div className="materials-card-container">
             <div className="materials-card-header">
-            <Link to="/home">
-              <p>ENTRENAMIENTOS</p>
+            <Link to="/materials">
+              <p>ENTRENAMIENTOS CORPORATIVOS</p>
             </Link>
               <img src={migajita} className="material-card-back-button" alt="icon-back-form" />
-              <p className="text-selected">ENTRENAMIENTOS CORPORATIVOS</p>
+              <p className="text-selected">ANTITRUS</p>
             </div>
             <div className="materials-card-body">
               <div className="materials-card-information">
               <div className="materials-card-body-text">
-                <p className="h1-style">Materias de Entrenamientos Corporativos</p>
-                <p className="h2-style">En esta sección, puedes crear materias nuevas en caso necesites. 
-                  Además, soy tan flexible, que puedes agregar todas las que necesitas. </p>
+                <p className="h1-style">Antitrus</p>
+                <p className="h2-style">Crea las submaterias que necesites </p>
               </div>
               <div className="adition-button-container">
-                <CreateMaterial
+                <CreateSubMaterial
                   showStatus={showStatus}
-                  toogleCreateMaterialModal={toogleCreateMaterialModal}
-                  onChangeMaterial={onChangeMaterial}
-                  addNewMaterial={addNewMaterial}
+                  toogleCreateSubMaterialModal={toogleCreateSubMaterialModal}
+                  onChangeSubMaterial={onChangeSubMaterial}
+                  addNewSubMaterial={addNewSubMaterial}
                 />
                 {/* <button className="material-button" type="button">
                   <img src={fileicon} className="" alt="icon-back-form" />
@@ -44,13 +43,9 @@ export class MaterialCard extends Component {
               <div className="materials-card-materia-div">
                 
                 { // eslint-disable-next-line react/prop-types
-                materialList.map((element) => {
-                    return (
-                    <button className="material" key={element.id} >
-                      <Link to="/submaterials">
-                        <img src={materialfile} className="" alt="" />{element.name}
-                      </Link>
-                      </button>);
+                submaterialList.map((element) => {
+                    return (<div className="material" key={element.id}>
+                      <img src={materialfile} className="" alt="" />{element.name}</div>);
                   
                 })}
               </div>
@@ -62,4 +57,4 @@ export class MaterialCard extends Component {
   }
 
 }
-export default MaterialCard;
+export default SubMaterialCard;
