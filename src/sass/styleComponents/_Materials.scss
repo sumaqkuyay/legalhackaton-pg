@@ -51,6 +51,10 @@
     border-radius:5px;
     box-shadow: 2px 2px 5px #999;
 }
+.material-button:hover{
+    background-color: $skyblue;
+    color:$white;
+}
 .button-material-text{
     margin:auto;
     font-weight: bold;

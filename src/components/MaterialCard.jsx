@@ -43,7 +43,7 @@ export class MaterialCard extends Component {
                 { // eslint-disable-next-line react/prop-types
                 materialList.map((element) => {
                     return (<div className="material" key={element.id}>
-                      <img src={materialfile} className="" alt="" />{element.name}</div>);
+                      <img src={materialfile} className="material-file-icon" alt="" />{element.name}</div>);
                   
                 })}
               </div>

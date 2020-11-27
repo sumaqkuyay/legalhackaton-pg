@@ -13,6 +13,11 @@
     width: 346px;
     height: 90px;
     box-shadow: 2px 2px 5px #999;
+    transition: all 1s ease;
+}
+.home-button:hover{
+    background: $skyblue;
+    color: $white;
 }
 .home-header{
     display: -webkit-box;
