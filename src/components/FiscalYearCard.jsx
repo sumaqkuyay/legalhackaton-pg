@@ -43,8 +43,8 @@ export class FiscalYearCard extends Component {
               </div>
               </div>
               <div className="created-training-information">
-                  <p className="h2-style">Año</p>
-                  <p className="h2-style">Número de participantes pendientes</p>
+                  <p className="new-training-style1">Año</p>
+                  <p className="new-training-h2-style2">Número de participantes pendientes</p>
               </div>
               <div className="fiscal-year-card-div">
                 
@@ -53,8 +53,8 @@ export class FiscalYearCard extends Component {
                     return (
                       <button className="created-training-little-card" key={element.id}>
                         <Link to="/fiscalYear" className="created-training-little-text">
-                          <p className="h2-style">{element.name}</p>
-                          <p className="h2-style">0</p>
+                          <p className="created-training-yearname">{element.name}</p>
+                          <p className="created-training-people">0</p>
                         </Link>  
                       </button>
                       );

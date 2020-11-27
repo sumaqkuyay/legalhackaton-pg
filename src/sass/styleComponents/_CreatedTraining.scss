@@ -4,13 +4,11 @@
     border-color: $black;
     display: flex;
     width: 57em;
-    justify-content: space-around;
     font-weight: bold;
-    padding-top: 8px;
-    padding-bottom: 8px;
-
+    padding-top: 15px;
 }
 .created-training-little-card{
+    text-decoration: none;
     align-items: center;
     justify-content: space-around;
     display: flex;
@@ -28,17 +26,27 @@
     transition: all 1s ease;
 }
 .created-training-little-card:hover{
-    background: $skyblue;
     color: $white;
+    background: $yellow;
 }
 .created-training-little-text{
     display:flex;
 }
-.year-div{
+
+.created-training-yearname{
     font-size: 15px;
-    padding-left: 155px;
-    padding-right: 110px;
+    padding-right: 420px;
 }
-.number-participants-div{
+.created-training-people{
+    font-size: 15px;
+}
+.new-training-style1{
+    color: #333333;
+    font-size: 15px;
+    padding-left: 220px;
+    padding-right: 285px;
+}
+.new-training-h2-style2{
+    color: $black;
     font-size: 15px;
 }

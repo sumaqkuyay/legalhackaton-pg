@@ -20,13 +20,13 @@ export class SubMaterialCard extends Component {
             </Link>
             <div className="materials-card-header-little-section">
                 <img src={migajita} className="material-card-back-button" alt="icon-back-form" />
-                <p className="text-selected">ANTITRUS</p>
+                <p className="text-selected">ANTITRUST</p>
             </div>
             </div>
             <div className="materials-card-body">
               <div className="materials-card-information">
               <div className="materials-card-body-text">
-                <p className="h1-style">Antitrus</p>
+                <p className="h1-style">Antitrust</p>
                 <p className="h2-style">Crea las submaterias que necesites </p>
               </div>
               <div className="adition-button-container">
