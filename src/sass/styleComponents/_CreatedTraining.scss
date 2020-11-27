@@ -18,7 +18,7 @@
     border-radius: 5px;
     border: 1px solid $blue;
     background-color: $white;
-    width: 904px;
+    width: 870px;
     height: 60px;
     font-size: 10px;
     margin: 7px;
@@ -30,6 +30,9 @@
 .created-training-little-card:hover{
     background: $skyblue;
     color: $white;
+}
+.created-training-little-text{
+    display:flex;
 }
 .year-div{
     font-size: 15px;
