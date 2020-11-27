@@ -1,7 +1,16 @@
 .material {
-    border:2px solid red;
-    width: 150px;
-    height: 40px;
-    font-size:0.9em;
-    margin: 4px;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid $blue;
+    background-color: $white;
+    width: 170px;
+    height: 60px;
+    font-size: 10px;
+    margin: 7px;
+    font-weight: 700;
+    padding: 10px;
+    box-shadow: 2px 2px 5px #999;
 }

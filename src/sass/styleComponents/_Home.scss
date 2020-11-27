@@ -4,9 +4,11 @@ body{
     width: 100vw;
     height: 100vh;
 }
+.unaprueba{
+    display: flex;
+}
 .sidebar{
     color: $white;
-    float: left;
     background-color:$blue;
     writing-mode: vertical-lr;
     transform: rotate(180deg);
@@ -20,4 +22,5 @@ body{
     margin-bottom: 10px;
     border-bottom-left-radius: 50px;
     border-top-left-radius: 50px;
+    box-shadow: 2px 2px 5px #999;
 }

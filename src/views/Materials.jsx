@@ -54,7 +54,7 @@ export class Materials extends Component {
     render() {
         
       return (
-        <>
+        <div className="unaprueba">
           <aside className="sidebar">Temis, tu asistente legal</aside>
           <MaterialCard 
             showStatus={this.state.createMaterialModal} 
@@ -63,10 +63,13 @@ export class Materials extends Component {
             addNewMaterial={this.addNewMaterial}
             materialList={this.state.materialList}
           />
-        </>
+        </div>
       );
     }
   }
-  
+   /*<div className="unaprueba">
+        <aside className="sidebar">Temis, tu asistente legal</aside>
+        <MaterialCard/>
+        </div>*/
   export default Materials;
   

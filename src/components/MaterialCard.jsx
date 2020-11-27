@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CreateMaterial from '../components/CreateMaterial';
 import migajita from '../images/migajita.svg';
-// import fileicon from '../images/file-icon.svg';
+import materialfile from '../images/material-file.svg';
 
 export class MaterialCard extends Component {
   render() {
@@ -11,12 +11,12 @@ export class MaterialCard extends Component {
     return(
 
       <div className="materials">
-        <div className="materials-container">
-          <div className="materials-card">
+        <div className="materials-card">
+          <div className="materials-card-container">
             <div className="materials-card-header">
               <p>ENTRENAMIENTOS</p>
-              <img src={migajita} className="" alt="icon-back-form" />
-              <p>ENTRENAMIENTOS COORPORATIVOS</p>
+              <img src={migajita} className="material-card-back-button" alt="icon-back-form" />
+              <p className="text-selected">ENTRENAMIENTOS COORPORATIVOS</p>
             </div>
             <div className="materials-card-body">
               <div className="materials-card-information">
@@ -42,7 +42,8 @@ export class MaterialCard extends Component {
                 
                 { // eslint-disable-next-line react/prop-types
                 materialList.map((element) => {
-                    return (<div className="material" key={element.id}>{element.name}</div>);
+                    return (<div className="material" key={element.id}>
+                      <img src={materialfile} className="" alt="" />{element.name}</div>);
                   
                 })}
               </div>

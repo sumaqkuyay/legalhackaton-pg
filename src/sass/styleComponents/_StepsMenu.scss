@@ -1,11 +1,10 @@
 .button-div{
-    margin:auto;
+    margin: 10px;
     text-align: center;
 }
 .home-button{
     border-radius: 8px;
-    margin-top: 60px;
-    padding: 30px;
+    margin-top: 55px;
     justify-content: center;
     text-decoration: none;
     color: $black;
@@ -13,6 +12,7 @@
     border: transparent;
     width: 346px;
     height: 90px;
+    box-shadow: 2px 2px 5px #999;
 }
 .home-header{
     display: -webkit-box;
@@ -23,14 +23,38 @@
     border: transparent;
 }
 .home-card{
-    margin-top: 50px;
-    margin-left: 400px;
-    background-color: #FFFFFF;
-    // border:2px solid red;
+    margin: auto;
+    background-color: $white;
     border-radius: 20px;
-    width: 40em;
-    height: 40em;
-    padding: 6px;
+    width: 44em;
+    height: 32em;
     line-height: 1.3em;
-    text-align: center;
+    box-shadow: 2px 2px 5px #999;
+}
+.home-card-text{
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+.home-back-buttons{
+    display: -webkit-box;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    width: 19%;
+    font-weight: 700;
+}
+.home-back-buttons-2-version{
+    display: -webkit-box;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    width: 30%;
+    font-weight: 700;
+}
+.big-button-style{
+    font-weight: 900;
+    font-size: 20px;
+}
+.home-unique-text{
+    margin-left: 10px;
 }

@@ -1,23 +1,29 @@
 .materials{
-    margin-top: 50px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    // background-color: #000000;
 }
-.materials-container{
-    margin-top: 50px;
-    background-color: #FFFFFF;
+.materials-card{
+    margin-left: 8%;
+    margin-right: 8%;
+    background-color: $white;
     border-radius: 20px;
     display: flex;
+    box-shadow: 2px 2px 5px #999;
 }
 .materials-card-header{
-    display: flex;
+    display: -webkit-box;
     font-size: 12px;
     font-weight: bold;
     justify-content: space-between;
     width: 40%;
-    margin: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.material-card-back-button{
+    margin-left:10px;
+    margin-right: 10px;
 }
 .materials-card-body{
     margin-left: 40px;
@@ -28,5 +34,24 @@
     display: flex;
 }
 .materials-card-materia-div{
+    display: flex;
     background-color: $grey;
+    width: 57em;
+    height: 13em;
+    padding: 10px;
+}
+.material-button{
+    display: flex;
+    width: 13em;
+    padding: 5%;
+    text-decoration: none;
+    background-color: $blue;
+    border: transparent;
+    color:$white;
+    border-radius:5px;
+    box-shadow: 2px 2px 5px #999;
+}
+.button-material-text{
+    margin:auto;
+    font-weight: bold;
 }

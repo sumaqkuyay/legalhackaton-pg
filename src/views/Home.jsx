@@ -25,7 +25,7 @@ export class Home extends Component {
   render() {
     const {step} = this.state;
     return (
-      <div className="">
+      <div className="unaprueba">
         <aside className="sidebar">Temis, tu asistente legal</aside>
         <StepsMenu
             prevStep={this.prevStep}
