@@ -6,7 +6,9 @@ import Home from './views/Home';
 import Materials from './views/Materials';
 import SubMaterials from './views/SubMaterials';
 import CreatedTraining from './views/CreatedTraining';
+import FiscalYear from './views/FiscalYear';
 import './sass/index.scss';
+
 
 const App = () => (
   <Router>
@@ -16,6 +18,7 @@ const App = () => (
         <Route path="/materials" component={Materials} />
         <Route path="/submaterials" component={SubMaterials} />
         <Route path="/created-training" component={CreatedTraining} />
+        <Route path="/fiscalYear" component={FiscalYear} />
       </Switch>
     </HashRouter>
   </Router>

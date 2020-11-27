@@ -1,11 +1,14 @@
-import React, { Component }from 'react';
+import React, { Component } from 'react';
 import StepsMenu from '../components/StepsMenu';
+
+
 
 export class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      newPreference:'',
+      redirect: false,
+      newPreference: '',
       changeState: true,
       step: 1,
     };
@@ -23,7 +26,7 @@ export class Home extends Component {
     this.setState({ step });
   };
   render() {
-    const {step} = this.state;
+    const { step } = this.state;
     return (
       <div className="unaprueba">
         <aside className="sidebar">Temis, tu asistente legal</aside>
@@ -36,4 +39,5 @@ export class Home extends Component {
     );
   }
 }
+
 export default Home;

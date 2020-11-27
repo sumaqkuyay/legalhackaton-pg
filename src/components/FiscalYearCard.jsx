@@ -52,7 +52,7 @@ export class FiscalYearCard extends Component {
                 fiscalYearList.map((element) => {
                     return (
                       <button className="created-training-little-card" key={element.id}>
-                        <Link to="/" className="created-training-little-text">
+                        <Link to="/fiscalYear" className="created-training-little-text">
                           <p className="h2-style">{element.name}</p>
                           <p className="h2-style">0</p>
                         </Link>  

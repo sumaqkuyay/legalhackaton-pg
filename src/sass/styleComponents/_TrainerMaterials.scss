@@ -1,0 +1,35 @@
+$blue: #003da5;
+$black: #333333;
+
+.Links-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Link-title {
+  display: flex;
+  font-weight: 600;
+}
+
+.Link-title p {
+  margin-left: 10px;
+}
+
+.Description-link input {
+  border: solid 1px $blue;
+  background-color: rgba(0, 61, 165, 0.1);
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 375px;
+  height: 40px;
+  font-family: "Monserrat", sans-serif;
+  font-size: 18px;
+}
+
+.Description-link input::placeholder {
+  padding-left: 15px;
+  font-size: 18px;
+  color: $black;
+}
