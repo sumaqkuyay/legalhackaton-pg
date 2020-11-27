@@ -6,7 +6,7 @@ const CreateMaterial = ({showStatus, toogleCreateMaterialModal, onChangeMaterial
   return (
     <div>
       <div className="material-button">
-        <button type="button" className="button-material-text" onClick={toogleCreateMaterialModal}>Crear Publicación</button>
+        <button type="button" className="button-material-text" onClick={toogleCreateMaterialModal}>CREAR MATERIA</button>
       </div>
       <Modal show={showStatus} onHide={toogleCreateMaterialModal}>
         <Modal.Header closeButton>
