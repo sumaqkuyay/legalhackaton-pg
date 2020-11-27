@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/legalhackaton-pg/static/css/main.327bc77d.chunk.css",
-    "main.js": "/legalhackaton-pg/static/js/main.72c3ea25.chunk.js",
-    "main.js.map": "/legalhackaton-pg/static/js/main.72c3ea25.chunk.js.map",
-    "runtime-main.js": "/legalhackaton-pg/static/js/runtime-main.f3fff8ab.js",
-    "runtime-main.js.map": "/legalhackaton-pg/static/js/runtime-main.f3fff8ab.js.map",
+    "main.css": "/legalhackaton-pg/static/css/main.3f041779.chunk.css",
+    "main.js": "/legalhackaton-pg/static/js/main.df8be10c.chunk.js",
+    "main.js.map": "/legalhackaton-pg/static/js/main.df8be10c.chunk.js.map",
+    "runtime-main.js": "/legalhackaton-pg/static/js/runtime-main.ec4e9bd8.js",
+    "runtime-main.js.map": "/legalhackaton-pg/static/js/runtime-main.ec4e9bd8.js.map",
     "static/css/2.1a02f21c.chunk.css": "/legalhackaton-pg/static/css/2.1a02f21c.chunk.css",
-    "static/js/2.c5c956ee.chunk.js": "/legalhackaton-pg/static/js/2.c5c956ee.chunk.js",
-    "static/js/2.c5c956ee.chunk.js.map": "/legalhackaton-pg/static/js/2.c5c956ee.chunk.js.map",
-    "static/js/3.7660235b.chunk.js": "/legalhackaton-pg/static/js/3.7660235b.chunk.js",
-    "static/js/3.7660235b.chunk.js.map": "/legalhackaton-pg/static/js/3.7660235b.chunk.js.map",
+    "static/js/2.646b6534.chunk.js": "/legalhackaton-pg/static/js/2.646b6534.chunk.js",
+    "static/js/2.646b6534.chunk.js.map": "/legalhackaton-pg/static/js/2.646b6534.chunk.js.map",
+    "static/js/3.5b51b880.chunk.js": "/legalhackaton-pg/static/js/3.5b51b880.chunk.js",
+    "static/js/3.5b51b880.chunk.js.map": "/legalhackaton-pg/static/js/3.5b51b880.chunk.js.map",
     "index.html": "/legalhackaton-pg/index.html",
     "static/css/2.1a02f21c.chunk.css.map": "/legalhackaton-pg/static/css/2.1a02f21c.chunk.css.map",
-    "static/css/main.327bc77d.chunk.css.map": "/legalhackaton-pg/static/css/main.327bc77d.chunk.css.map",
-    "static/js/2.c5c956ee.chunk.js.LICENSE.txt": "/legalhackaton-pg/static/js/2.c5c956ee.chunk.js.LICENSE.txt",
+    "static/css/main.3f041779.chunk.css.map": "/legalhackaton-pg/static/css/main.3f041779.chunk.css.map",
+    "static/js/2.646b6534.chunk.js.LICENSE.txt": "/legalhackaton-pg/static/js/2.646b6534.chunk.js.LICENSE.txt",
     "static/media/material-file.70310348.svg": "/legalhackaton-pg/static/media/material-file.70310348.svg",
     "static/media/migaja-back.02d70853.svg": "/legalhackaton-pg/static/media/migaja-back.02d70853.svg",
     "static/media/migajita.b3cf3b47.svg": "/legalhackaton-pg/static/media/migajita.b3cf3b47.svg",
     "static/media/index.scss": "/legalhackaton-pg/static/media/wallpaper-white.1a0604b1.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f3fff8ab.js",
+    "static/js/runtime-main.ec4e9bd8.js",
     "static/css/2.1a02f21c.chunk.css",
-    "static/js/2.c5c956ee.chunk.js",
-    "static/css/main.327bc77d.chunk.css",
-    "static/js/main.72c3ea25.chunk.js"
+    "static/js/2.646b6534.chunk.js",
+    "static/css/main.3f041779.chunk.css",
+    "static/js/main.df8be10c.chunk.js"
   ]
 }
