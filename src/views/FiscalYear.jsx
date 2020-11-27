@@ -14,14 +14,19 @@ class FiscalYear extends React.Component {
         this.state = {
             redirect: false,
             selectedFile: null,
-            jsonData: null
+            jsonData: null,
+            jsonForm: null
         };
 
         this.onFileChange = this.onFileChange.bind(this);
+        this.onFileChangeForm = this.onFileChangeForm.bind(this);
         this.onFileUpload = this.onFileUpload.bind(this);
     }
 
     onFileChange(event) {
+        this.setState({ selectedFile: event.target.files[0] });
+    }
+    onFileChangeForm(event) {
         this.setState({ selectedFile: event.target.files[0] });
     }
 
@@ -36,6 +41,20 @@ class FiscalYear extends React.Component {
             const data = XLSX.utils.sheet_to_csv(ws, { header: 1 });
             console.log(this.convertToJson(data)); // shows data in json format
             this.setState({ jsonData: this.convertToJson(data) });
+        };
+        reader.readAsBinaryString(f);
+    }
+    onFileUploadForm() {
+        var f = this.state.selectedFile;
+        const reader = new FileReader();
+        reader.onload = (evt) => {
+            const bstr = evt.target.result;
+            const wb = XLSX.read(bstr, { type: "binary" });
+            const wsname = wb.SheetNames[0];
+            const ws = wb.Sheets[wsname];
+            const data = XLSX.utils.sheet_to_csv(ws, { header: 1 });
+            console.log(this.convertToJson(data)); // shows data in json format
+            this.setState({ jsonForm: this.convertToJson(data) });
         };
         reader.readAsBinaryString(f);
     }
@@ -78,13 +97,29 @@ class FiscalYear extends React.Component {
                         <div className="Excel-upload">
                             <img src={IconImport} alt="" />
                             <label htmlFor="fileToUpload" className="upload"> CARGAR LISTA DE <br /> ASISTENTES</label>
-                            <input type="file" className="File-to-upload" style={{ visibility: 'hidden' }} name="fileToUpload" id="fileToUpload" onChange={this.onFileChange} />
+                            <input type="file" className="File-to-upload" style={{ visibility: 'hidden' }} name="fileToUpload" id="fileToUpload" onChange={this.onFileChangeForm} />
                         </div>
                         <div className="Excel-convert-to-json">
                             <img src={IconExport} alt="" />
                             <label htmlFor="submit" >DESCARGAR LISTA <br /> DE PENDIENTES</label>
                             <input type="submit" style={{ visibility: 'hidden' }} name="submit" id="submit" onClick={this.onFileUpload} />
                         </div>
+                    </div>
+                    <div className="Title-pendientes">
+                        <h1>TODOS LOS PENDIENTES</h1>
+                        <hr />
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Apellido</li>
+                            <li>Nombre</li>
+                            <li>Correo</li>
+                            <li>Función</li>
+                            <li>Area</li>
+                        </ul>
+                    </div>
+                    <div className="Pending-list-box">
+
                     </div>
                 </div>
             </div>
