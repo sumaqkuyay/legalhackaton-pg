@@ -3,6 +3,7 @@ import firebase from './firebaseConfig';
 // COLECCION EN FIRESTORE - ADD ORDER
 
 const collectionMaterials = () => firebase.firestore().collection('Materials');
+const collectionFiscalYears = () => firebase.firestore().collection('FiscalYears');
 const collectionSubMaterials = () => firebase.firestore().collection('SubMaterials');
 
 // AGREGAR DOCS A LA COLECCION
@@ -54,9 +55,35 @@ export const getSubMaterials = () => new Promise((resolve) => {
     resolve(docs);
   });
 });
+
+export const addFiscalYears = (fiscalYear) => new Promise((res) => {
+  collectionFiscalYears().add(fiscalYear)
+    .then((doc) => {
+      res(doc);
+      console.log('Añadido con exito');
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+// LEER LOS DOCS DE LA COLECCION
+export const getFiscalYears = () => new Promise((resolve) => {
+  collectionFiscalYears().onSnapshot((query) => {
+    const docs = [];
+    query.forEach((fiscalYear) => {
+      docs.push({ ...fiscalYear.data(), id: fiscalYear.id });
+    });
+    // console.log(docs);
+    resolve(docs);
+  });
+});
+
 export default {
   addMaterials,
   getMaterials,
   addSubMaterials,
   getSubMaterials,
+  addFiscalYears,
+  getFiscalYears,
 };

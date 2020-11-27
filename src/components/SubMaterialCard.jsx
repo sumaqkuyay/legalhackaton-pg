@@ -47,7 +47,10 @@ export class SubMaterialCard extends Component {
                 { // eslint-disable-next-line react/prop-types
                 submaterialList.map((element) => {
                     return (<div className="material" key={element.id}>
-                      <img src={materialfile} className="" alt="" />{element.name}</div>);
+                      <Link to="/created-training">
+                        <img src={materialfile} className="" alt="" />{element.name}
+                      </Link>
+                      </div>);
                   
                 })}
               </div>

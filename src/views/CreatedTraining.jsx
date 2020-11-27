@@ -1,50 +1,67 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import migajita from '../images/migajita.svg';
+import FiscalYearCard from '../components/FiscalYearCard';
+import {addFiscalYears,getFiscalYears} from '../controller/firestores';
 
 export class CreatedTraining extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      fiscalYearList:[],
+      fiscalYear: {
+        name: '',
+        // subMaterials:[],
+      },
+      createfiscalYearModal: false,
+      changeState: true,
+    };
+  }
+  componentDidMount() {
+    this.loadfiscalYear();
+  }
+
+  loadfiscalYear =()=>{
+    getFiscalYears().then((preferences)=>{
+      let fiscalYearList=[];
+      preferences.map((item)=>{ 
+        fiscalYearList.push(item);
+      });
+      this.setState({fiscalYearList: [...fiscalYearList]});
+    }).catch(()=>{
+      console.log('fallo');
+    });
+  }
+
+  addNewfiscalYear = e => {
+    e.preventDefault();
+    addFiscalYears(this.state.fiscalYear).then(()=>{
+      this.loadfiscalYear();
+    });
+    this.toogleCreatefiscalYearModal();
+  }
+
+  toogleCreatefiscalYearModal = () => {
+    this.setState({createfiscalYearModal:!this.state.createfiscalYearModal})
+  }
+
+  onChangefiscalYear = e=>{
+    const { fiscalYear } = this.state;
+    fiscalYear[e.target.name] = e.target.value;
+    this.setState({ fiscalYear: { ...fiscalYear } });
+  }
+
     render() {
-        return (
-            <div className="unaprueba">
-                <aside className="sidebar">Temis, tu asistente legal</aside>
-            <div className="materials">
-                <div className="materials-card">
-                    <div className="materials-card-container">
-                        <div className="materials-card-header">
-                            <Link to="/submaterials">
-                                <p>ANTITRUST</p>
-                            </Link>
-                            <div className="materials-card-header-little-section">
-                                <img src={migajita} className="material-card-back-button" alt="icon-back-form" />
-                                <p className="text-selected">HUB&SPOKE</p>
-                            </div>
-                        </div>
-                        <div className="materials-card-body">
-                            <div className="materials-card-information">
-                                <div className="materials-card-body-text">
-                                    <p className="h1-style">Hub&Spoke</p>
-                                    <p className="h3-style">TODOS LOS ENTRENAMIENTOS</p>
-                                </div>
-                                <div className="adition-button-container">
-                                    <button type="button" className="material-button">Crear Entrenamiento Anual</button>
-                                </div>
-                            </div>
-                            <div className="created-training-information">
-                                <div className="year-div">Año</div>
-                                <div className="number-participants-div">Número de participantes pendientes</div>
-                            </div>
-                            <div className="materials-card-materia-div">
-                                <div className="created-training-little-card">
-                                    <p className="h2-style">FY-1920</p>
-                                    <p className="h2-style">0</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        );
-      }
+      return (
+        <div className="unaprueba">
+          <aside className="sidebar">Temis, tu asistente legal</aside>
+          <FiscalYearCard 
+            showStatus={this.state.createfiscalYearModal} 
+            toogleCreatefiscalYearModal={this.toogleCreatefiscalYearModal}
+            onChangefiscalYear={this.onChangefiscalYear} 
+            addNewfiscalYear={this.addNewfiscalYear}
+            fiscalYearList={this.state.fiscalYearList}
+          />
+        </div>
+      );
     }
+  }
 export default CreatedTraining;

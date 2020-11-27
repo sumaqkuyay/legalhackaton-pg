@@ -1,0 +1,68 @@
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import CreateFiscalYear from '../components/CreateFiscalYear';
+import migajita from '../images/migajita.svg';
+
+export class FiscalYearCard extends Component {
+  render() {
+    // eslint-disable-next-line react/prop-types
+    const { showStatus, toogleCreatefiscalYearModal, onChangefiscalYear, addNewfiscalYear, fiscalYearList } = this.props;
+    
+    return(
+
+      <div className="materials">
+        <div className="materials-card">
+          <div className="materials-card-container">
+            <div className="materials-card-header">
+            <Link to="/submaterials">
+              <p>Antitrust</p>
+            </Link>
+              <img src={migajita} className="material-card-back-button" alt="icon-back-form" />
+              <p className="text-selected">Hub&Spoke</p>
+            </div>
+            <div className="materials-card-body">
+              <div className="materials-card-information">
+              <div className="materials-card-body-text">
+                <p className="h1-style">Hub&Spoke</p>
+                <p className="h3-style">TODOS LOS ENTRENAMIENTOS</p>
+              </div>
+              <div className="created-training-information">
+                  <p className="h2-style">Año</p>
+                  <p className="h2-style">Número de participantes pendientes</p>
+              </div>
+              <div className="adition-button-container">
+                <CreateFiscalYear
+                  showStatus={showStatus}
+                  toogleCreatefiscalYearModal={toogleCreatefiscalYearModal}
+                  onChangefiscalYear={onChangefiscalYear}
+                  addNewfiscalYear={addNewfiscalYear}
+                />
+                {/* <button className="material-button" type="button">
+                  <img src={fileicon} className="" alt="icon-back-form" />
+                  <p className="txt-btn-form">CREAR MATERIA</p>
+                </button> */}
+              </div>
+              </div>
+              <div className="materials-card-materia-div">
+                
+                { // eslint-disable-next-line react/prop-types
+                fiscalYearList.map((element) => {
+                    return (
+                      <button className="created-training-little-card" key={element.id}>
+                        <Link to="/">
+                          <p className="h2-style">{element.name}</p>
+                          <p className="h2-style">0</p>
+                        </Link>  
+                      </button>
+                      );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+}
+export default FiscalYearCard;
