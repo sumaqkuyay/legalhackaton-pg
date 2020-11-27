@@ -1,50 +1,28 @@
 import firebase from './firebaseConfig';
 
-// ejemplos de uso
 // COLECCION EN FIRESTORE - ADD ORDER
-const collectionClients = () => firebase.firestore().collection('Clients');
-const collectionProducts = () => firebase.firestore().collection('Products');
-const collectionOrders = () => firebase.firestore().collection('Orders');
+
+const collectionMaterials = () => firebase.firestore().collection('Materials');
 
 // AGREGAR DOCS A LA COLECCION
-export const addClient = (client) => {
-  console.log(client);
-  collectionClients().add(client)
-    .then((docRef) => {
-      console.log('Document written with ID: ', docRef.id);
-    })
-    .catch((error) => {
-      console.error('Error adding document: ', error);
-    });
-};
 
-export const addOrder = (client) => {
-  console.log(client);
-  collectionOrders().add(client)
-    .then((docRef) => {
-      console.log('Document written with ID: ', docRef.id);
+export const addMaterials = (material) => new Promise((res) => {
+  collectionMaterials().add(material)
+    .then((doc) => {
+      res(doc);
+      console.log('Añadido con exito');
     })
-    .catch((error) => {
-      console.error('Error adding document: ', error);
+    .catch((err) => {
+      console.log(err);
     });
-};
-
-export const addProducts = (product) => {
-  collectionProducts().add(product)
-    .then((docRef) => {
-      console.log('Document written with ID: ', docRef.id);
-    })
-    .catch((error) => {
-      console.error('Error adding document: ', error);
-    });
-};
+});
 
 // LEER LOS DOCS DE LA COLECCION
-export const getProducts = () => new Promise((resolve, reject) => {
-  collectionProducts().onSnapshot((query) => {
+export const getMaterials = () => new Promise((resolve) => {
+  collectionMaterials().onSnapshot((query) => {
     const docs = [];
-    query.forEach((product) => {
-      docs.push({ ...product.data(), id: product.id });
+    query.forEach((material) => {
+      docs.push({ ...material.data(), id: material.id });
     });
     // console.log(docs);
     resolve(docs);
@@ -52,8 +30,6 @@ export const getProducts = () => new Promise((resolve, reject) => {
 });
 
 export default {
-  addClient,
-  addProducts,
-  getProducts,
-  addOrder,
+  addMaterials,
+  getMaterials,
 };
