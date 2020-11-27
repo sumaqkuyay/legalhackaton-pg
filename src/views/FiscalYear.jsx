@@ -144,7 +144,7 @@ class FiscalYear extends React.Component {
                             <li>Nombre</li>
                             <li>Correo</li>
                             <li>Función</li>
-                            <li>Area</li>
+                            <li>Área</li>
                         </ul>
                     </div>
                     <div className="Pending-list-box">
