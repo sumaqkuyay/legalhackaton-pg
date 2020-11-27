@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import CreateMaterial from '../components/CreateMaterial';
 import migajita from '../images/migajita.svg';
-import fileicon from '../images/file-icon.svg';
+// import fileicon from '../images/file-icon.svg';
 
 export class MaterialCard extends Component {
   render() {
+    // eslint-disable-next-line react/prop-types
+    const { showStatus, toogleCreateMaterialModal, onChangeMaterial, addNewMaterial, materialList } = this.props;
+    
     return(
+
       <div className="materials">
         <div className="materials-card">
           <div className="materials-card-container">
@@ -21,13 +26,25 @@ export class MaterialCard extends Component {
                   Además, soy tan flexible, que puedes agregar todas las que necesitas. </p>
               </div>
               <div className="adition-button-container">
-                <button className="material-button" type="button">
+                <CreateMaterial
+                  showStatus={showStatus}
+                  toogleCreateMaterialModal={toogleCreateMaterialModal}
+                  onChangeMaterial={onChangeMaterial}
+                  addNewMaterial={addNewMaterial}
+                />
+                {/* <button className="material-button" type="button">
                   <img src={fileicon} className="" alt="icon-back-form" />
-                  <p className="button-material-text">CREAR MATERIA</p>
-                </button>
+                  <p className="txt-btn-form">CREAR MATERIA</p>
+                </button> */}
               </div>
               </div>
               <div className="materials-card-materia-div">
+                
+                { // eslint-disable-next-line react/prop-types
+                materialList.map((element) => {
+                    return (<div className="material" key={element.id}>{element.name}</div>);
+                  
+                })}
               </div>
             </div>
           </div>
