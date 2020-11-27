@@ -27,24 +27,23 @@
     border-radius: 20px;
     width: 44em;
     height: 32em;
-    padding: 6px;
     line-height: 1.3em;
 }
 .home-card-text{
     margin-left: 25px;
     margin-right: 25px;
-    margin-top: 45px;
+    margin-top: 30px;
     margin-bottom: 0px;
 }
 .home-back-buttons{
-    display: flex;
+    display: -webkit-box;
     margin-bottom: 15px;
     justify-content: space-between;
     width: 19%;
     font-weight: 700;
 }
 .home-back-buttons-2-version{
-    display: flex;
+    display: -webkit-box;
     margin-bottom: 15px;
     justify-content: space-between;
     width: 30%;
@@ -53,4 +52,7 @@
 .big-button-style{
     font-weight: 900;
     font-size: 20px;
+}
+.home-unique-text{
+    margin-left: 10px;
 }

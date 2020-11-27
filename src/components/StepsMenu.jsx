@@ -32,7 +32,7 @@ export class StepsMenu extends Component {
             <button className="button-general" onClick={prevStep}>
               <img src={migaja} className="icon-back-form" alt="icon-back-form" />
             </button>
-            <p className="txt-btn-form">P&G PERÚ</p>
+            <p className="home-unique-text">P&G PERÚ</p>
           </div>
             <p className="h1-style">Ahora elige el tipo de responsabilidad a cumplir.</p>
             <p className="h2-style">Selecciona un tipo de responsabilidad con la que quieres que te ayude.</p>
@@ -53,7 +53,7 @@ export class StepsMenu extends Component {
             <button className="button-general" onClick={prevStep}>
               <img src={migaja} className="icon-back-form" alt="icon-back-form" />
             </button>
-            <p className="txt-btn-form">ENTRENAMIENTOS</p>
+            <p className="home-unique-text">ENTRENAMIENTOS</p>
           </div>
             <p className="h1-style">¡Perfecto! Ahora indica el tipo de entrenamiento </p>
             <p className="h2-style">Escoge un tipo de entrenamiento y continuemos. :D</p>
