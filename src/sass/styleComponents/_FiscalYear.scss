@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700;900&display=swap");
+$black: #333333;
+$blue: #003da5;
+$yellow: #fedb00;
+$bluesky: #00a3e0;
+$white: #ffffff;
+
+.Background-body {
+  background-image: url(../../images/wallpaper-white.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  // width: 1600px;
+  height: 996px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Info-container {
+  background-color: white;
+  width: 1300px;
+  height: 900px;
+  border-radius: 25px;
+}
+
+.Bread-crumb {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  margin: 95px 0 32px 55px;
+}
+
+.Excel-upload {
+  border: solid 1px $blue;
+  border-radius: 5px;
+  width: 308px;
+  height: 86px;
+  font-family: "Monserrat", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: $blue;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.Excel-upload img {
+  margin-left: 30px;
+}
+
+.upload {
+  width: 380px;
+  display: flex;
+  justify-content: center;
+}
+.File-to-upload {
+  width: 0;
+}
+
+.Excel-convert-to-json {
+  border: solid 1px $black;
+  border-radius: 5px;
+  width: 308px;
+  height: 86px;
+  font-family: "Monserrat", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: $blue;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: $yellow;
+}
+
+.Excel-convert-to-json input {
+  width: 0;
+}
+
+.Excel-convert-to-json label {
+  width: 380px;
+  font-size: 18px;
+  font-family: "Monserrat", sans-serif;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+}
+
+.Excel-convert-to-json img {
+  margin-left: 30px;
+}
+
+.Buttons-excel-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 35px 12px 0 8px;
+}
+
+hr {
+  border: solid 1px $black;
+  width: 1210px;
+  margin: 0 0 35px 35px;
+}
+
+.Title-pendientes h1 {
+  margin: 35px 0 15px 35px;
+  color: $blue;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+ul {
+  display: inline;
+  height: 87px;
+}
+
+li {
+  display: inline;
+  margin: 30px 87px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.Pending-list-box {
+  width: 1212px;
+  height: 354px;
+  background-color: rgba(234, 234, 234, 0.72);
+  overflow-y: scroll;
+  margin-left: 35px;
+  margin-top: 30px;
+  border-top: solid 2px black;
+}
+
+.Items-list {
+  display: flex;
+  font-size: 20px;
+  margin-left: -40px;
+  justify-content: space-around;
+}
+
+.Items-info {
+  margin: 30px 87px;
+}
