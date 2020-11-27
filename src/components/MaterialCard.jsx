@@ -6,12 +6,12 @@ export class MaterialCard extends Component {
   render() {
     return(
       <div className="materials">
-        <div className="materials-container">
-          <div className="materials-card">
+        <div className="materials-card">
+          <div className="materials-card-container">
             <div className="materials-card-header">
               <p>ENTRENAMIENTOS</p>
               <img src={migajita} className="" alt="icon-back-form" />
-              <p>ENTRENAMIENTOS COORPORATIVOS</p>
+              <p className="text-selected">ENTRENAMIENTOS COORPORATIVOS</p>
             </div>
             <div className="materials-card-body">
               <div className="materials-card-information">
@@ -23,7 +23,7 @@ export class MaterialCard extends Component {
               <div className="adition-button-container">
                 <button className="material-button" type="button">
                   <img src={fileicon} className="" alt="icon-back-form" />
-                  <p className="txt-btn-form">CREAR MATERIA</p>
+                  <p className="button-material-text">CREAR MATERIA</p>
                 </button>
               </div>
               </div>
