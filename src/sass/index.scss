@@ -1,34 +1,34 @@
 //varibles:
 
-$black:#333333;
-$blue:#003DA5;
-$yellow:#FEDB00;
-$bluesky:#00A3E0;
-$white:#FFFFFF;
+$black: #333333;
+$blue: #003da5;
+$yellow: #fedb00;
+$bluesky: #00a3e0;
+$white: #ffffff;
 
 //Views:
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700;900&display=swap");
 @import "./styleComponents/Home";
 @import "./styleComponents/StepsMenu";
 
 //General styles:
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-body {
-  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.h1-style{
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.h1-style {
   font-weight: 900;
   font-size: 24px;
   padding-bottom: 30px;
 }
 
-.h2-style{
+.h2-style {
   font-size: 15px;
 }
