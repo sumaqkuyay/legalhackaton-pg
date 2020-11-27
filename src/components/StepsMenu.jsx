@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import btnBack from '../images/btn_back.png';
+import migaja from '../images/migaja-back.svg';
 
 export class StepsMenu extends Component {
 
@@ -27,13 +27,13 @@ export class StepsMenu extends Component {
         </div>
 
         <div className="home-card" hidden={step === 2 ? false : true }>
-          <div className="">
-            <button className="btn btn-danger btn-form" onClick={prevStep}>
-              <img src={btnBack} className="icon-back-form" alt="icon-back-form" />
+          <div className="home-card-text">
+          <div className="home-back-buttons">
+            <button className="button-general" onClick={prevStep}>
+              <img src={migaja} className="icon-back-form" alt="icon-back-form" />
             </button>
             <p className="txt-btn-form">P&G PERÚ</p>
           </div>
-          <div className="App">
             <p className="h1-style">Ahora elige el tipo de responsabilidad a cumplir.</p>
             <p className="h2-style">Selecciona un tipo de responsabilidad con la que quieres que te ayude.</p>
           </div>
@@ -48,13 +48,13 @@ export class StepsMenu extends Component {
         </div>
 
         <div className="home-card" hidden={step === 3 ? false : true }>
-          <div className="">
-            <button className="btn btn-danger btn-form" onClick={prevStep}>
-              <img src={btnBack} className="icon-back-form" alt="icon-back-form" />
+          <div className="home-card-text">
+          <div className="home-back-buttons">
+            <button className="button-general" onClick={prevStep}>
+              <img src={migaja} className="icon-back-form" alt="icon-back-form" />
             </button>
             <p className="txt-btn-form">ENTRENAMIENTOS</p>
           </div>
-          <div className="App">
             <p className="h1-style">¡Perfecto! Ahora indica el tipo de entrenamiento </p>
             <p className="h2-style">Escoge un tipo de entrenamiento y continuemos. :D</p>
           </div>
