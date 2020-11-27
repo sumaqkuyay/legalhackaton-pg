@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import CreateSubMaterial from '../components/CreateSubMaterial';
+import CreateFiscalYear from '../components/CreateFiscalYear';
 import migajita from '../images/migajita.svg';
-import materialfile from '../images/material-file.svg';
 
-export class SubMaterialCard extends Component {
+export class FiscalYearCard extends Component {
   render() {
     // eslint-disable-next-line react/prop-types
-    const { showStatus, toogleCreateSubMaterialModal, onChangeSubMaterial, addNewSubMaterial, submaterialList } = this.props;
+    const { showStatus, toogleCreatefiscalYearModal, onChangefiscalYear, addNewfiscalYear, fiscalYearList } = this.props;
     
     return(
 
@@ -15,24 +14,28 @@ export class SubMaterialCard extends Component {
         <div className="materials-card">
           <div className="materials-card-container">
             <div className="materials-card-header">
-            <Link to="/materials">
-              <p>ENTRENAMIENTOS CORPORATIVOS</p>
+            <Link to="/submaterials">
+              <p>Antitrust</p>
             </Link>
               <img src={migajita} className="material-card-back-button" alt="icon-back-form" />
-              <p className="text-selected">ANTITRUS</p>
+              <p className="text-selected">Hub&Spoke</p>
             </div>
             <div className="materials-card-body">
               <div className="materials-card-information">
               <div className="materials-card-body-text">
-                <p className="h1-style">Antitrus</p>
-                <p className="h2-style">Crea las submaterias que necesites </p>
+                <p className="h1-style">Hub&Spoke</p>
+                <p className="h3-style">TODOS LOS ENTRENAMIENTOS</p>
+              </div>
+              <div className="created-training-information">
+                  <p className="h2-style">Año</p>
+                  <p className="h2-style">Número de participantes pendientes</p>
               </div>
               <div className="adition-button-container">
-                <CreateSubMaterial
+                <CreateFiscalYear
                   showStatus={showStatus}
-                  toogleCreateSubMaterialModal={toogleCreateSubMaterialModal}
-                  onChangeSubMaterial={onChangeSubMaterial}
-                  addNewSubMaterial={addNewSubMaterial}
+                  toogleCreatefiscalYearModal={toogleCreatefiscalYearModal}
+                  onChangefiscalYear={onChangefiscalYear}
+                  addNewfiscalYear={addNewfiscalYear}
                 />
                 {/* <button className="material-button" type="button">
                   <img src={fileicon} className="" alt="icon-back-form" />
@@ -43,13 +46,15 @@ export class SubMaterialCard extends Component {
               <div className="materials-card-materia-div">
                 
                 { // eslint-disable-next-line react/prop-types
-                submaterialList.map((element) => {
-                    return (<div className="material" key={element.id}>
-                      <Link to="/created-training">
-                        <img src={materialfile} className="" alt="" />{element.name}
-                      </Link>
-                      </div>);
-                  
+                fiscalYearList.map((element) => {
+                    return (
+                      <button className="created-training-little-card" key={element.id}>
+                        <Link to="/">
+                          <p className="h2-style">{element.name}</p>
+                          <p className="h2-style">0</p>
+                        </Link>  
+                      </button>
+                      );
                 })}
               </div>
             </div>
@@ -60,4 +65,4 @@ export class SubMaterialCard extends Component {
   }
 
 }
-export default SubMaterialCard;
+export default FiscalYearCard;
