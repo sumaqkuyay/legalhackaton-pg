@@ -4,8 +4,7 @@
 }
 .home-button{
     border-radius: 8px;
-    margin-top: 60px;
-    padding: 30px;
+    margin-top: 55px;
     justify-content: center;
     text-decoration: none;
     color: $black;
@@ -34,10 +33,24 @@
 .home-card-text{
     margin-left: 25px;
     margin-right: 25px;
-    margin-top: 30px;
+    margin-top: 45px;
     margin-bottom: 0px;
 }
 .home-back-buttons{
-    display:flex;
+    display: flex;
     margin-bottom: 15px;
+    justify-content: space-between;
+    width: 19%;
+    font-weight: 700;
+}
+.home-back-buttons-2-version{
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    width: 30%;
+    font-weight: 700;
+}
+.big-button-style{
+    font-weight: 900;
+    font-size: 20px;
 }
