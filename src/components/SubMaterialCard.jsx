@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import CreateSubMaterial from '../components/CreateSubMaterial';
 import migajita from '../images/migajita.svg';
 import materialfile from '../images/material-file.svg';
@@ -14,7 +15,9 @@ export class SubMaterialCard extends Component {
         <div className="materials-card">
           <div className="materials-card-container">
             <div className="materials-card-header">
+            <Link to="/materials">
               <p>ENTRENAMIENTOS CORPORATIVOS</p>
+            </Link>
               <img src={migajita} className="material-card-back-button" alt="icon-back-form" />
               <p className="text-selected">ANTITRUS</p>
             </div>
