@@ -5,7 +5,7 @@ import { Modal } from 'react-bootstrap';
 const CreateFiscalYear = ({showStatus, toogleCreatefiscalYearModal, onChangefiscalYear, addNewfiscalYear}) => {
   return (
     <div>
-      <div className="material-button">
+      <div className="">
         <button type="button" className="material-button" onClick={toogleCreatefiscalYearModal}>CREAR ENTRENAMIENTO ANUAL</button>
       </div>
       <Modal show={showStatus} onHide={toogleCreatefiscalYearModal}>

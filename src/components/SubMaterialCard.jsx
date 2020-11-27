@@ -18,8 +18,10 @@ export class SubMaterialCard extends Component {
             <Link to="/materials">
               <p>ENTRENAMIENTOS CORPORATIVOS</p>
             </Link>
-              <img src={migajita} className="material-card-back-button" alt="icon-back-form" />
-              <p className="text-selected">ANTITRUS</p>
+            <div className="materials-card-header-little-section">
+                <img src={migajita} className="material-card-back-button" alt="icon-back-form" />
+                <p className="text-selected">ANTITRUS</p>
+            </div>
             </div>
             <div className="materials-card-body">
               <div className="materials-card-information">

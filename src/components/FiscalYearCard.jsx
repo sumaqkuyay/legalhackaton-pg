@@ -15,20 +15,19 @@ export class FiscalYearCard extends Component {
           <div className="materials-card-container">
             <div className="materials-card-header">
             <Link to="/submaterials">
-              <p>Antitrust</p>
+              <p>ANTITRUST</p>
             </Link>
-              <img src={migajita} className="material-card-back-button" alt="icon-back-form" />
-              <p className="text-selected">Hub&Spoke</p>
+              <div className="materials-card-header-little-section">
+                <img src={migajita} className="material-card-back-button" alt="icon-back-form" />
+                <p className="text-selected">HUB&SPOKE</p>
+              </div>
             </div>
+
             <div className="materials-card-body">
               <div className="materials-card-information">
               <div className="materials-card-body-text">
                 <p className="h1-style">Hub&Spoke</p>
                 <p className="h3-style">TODOS LOS ENTRENAMIENTOS</p>
-              </div>
-              <div className="created-training-information">
-                  <p className="h2-style">Año</p>
-                  <p className="h2-style">Número de participantes pendientes</p>
               </div>
               <div className="adition-button-container">
                 <CreateFiscalYear
@@ -43,13 +42,17 @@ export class FiscalYearCard extends Component {
                 </button> */}
               </div>
               </div>
-              <div className="materials-card-materia-div">
+              <div className="created-training-information">
+                  <p className="h2-style">Año</p>
+                  <p className="h2-style">Número de participantes pendientes</p>
+              </div>
+              <div className="fiscal-year-card-div">
                 
                 { // eslint-disable-next-line react/prop-types
                 fiscalYearList.map((element) => {
                     return (
                       <button className="created-training-little-card" key={element.id}>
-                        <Link to="/fiscalYear">
+                        <Link to="/fiscalYear" className="created-training-little-text">
                           <p className="h2-style">{element.name}</p>
                           <p className="h2-style">0</p>
                         </Link>  

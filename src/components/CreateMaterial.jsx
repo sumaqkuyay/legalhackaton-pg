@@ -5,7 +5,7 @@ import { Modal } from 'react-bootstrap';
 const CreateMaterial = ({showStatus, toogleCreateMaterialModal, onChangeMaterial, addNewMaterial}) => {
   return (
     <div>
-      <div className="material-button">
+      <div className="">
         <button type="button" className="material-button" onClick={toogleCreateMaterialModal}>CREAR MATERIA</button>
       </div>
       <Modal show={showStatus} onHide={toogleCreateMaterialModal}>
