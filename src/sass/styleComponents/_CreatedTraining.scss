@@ -1,4 +1,14 @@
-.material {
+.created-training-information{
+    border-top: solid;
+    border-bottom: solid;
+    border-color: $black;
+    display: flex;
+    width: 57em;
+    justify-content: space-around;
+    font-weight: bold;
+    padding-top: 10px;
+}
+.created-training-little-card{
     align-items: center;
     justify-content: space-around;
     display: flex;
@@ -6,7 +16,7 @@
     border-radius: 5px;
     border: 1px solid $blue;
     background-color: $white;
-    width: 170px;
+    width: 904px;
     height: 60px;
     font-size: 10px;
     margin: 7px;
@@ -14,11 +24,4 @@
     padding: 10px;
     box-shadow: 2px 2px 5px #999;
     transition: all 1s ease;
-}
-.material:hover{
-    background: $skyblue;
-    color: $white;
-}
-.material-file-icon{
-    color:$white;
 }
