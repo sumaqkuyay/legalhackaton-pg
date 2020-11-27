@@ -162,10 +162,10 @@ class FiscalYear extends React.Component {
                                             <td>{item.Email}</td>
                                         </div>
                                         <div className="Items-info">
-                                            <td> </td>
+                                            <td></td>
                                         </div>
                                         <div className="Items-info">
-                                            <td> </td>
+                                            <td></td>
                                         </div>
                                     </div>
                                 </div>
