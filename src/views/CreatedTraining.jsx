@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import migajita from '../images/migajita.svg';
 
 export class CreatedTraining extends Component {
@@ -10,9 +11,13 @@ export class CreatedTraining extends Component {
                 <div className="materials-card">
                     <div className="materials-card-container">
                         <div className="materials-card-header">
-                            <p>Antitrust</p>
-                            <img src={migajita} className="material-card-back-button" alt="icon-back-form" />
-                            <p className="text-selected">Hub&Spoke</p>
+                            <Link to="/submaterials">
+                                <p>ANTITRUST</p>
+                            </Link>
+                            <div className="materials-card-header-little-section">
+                                <img src={migajita} className="material-card-back-button" alt="icon-back-form" />
+                                <p className="text-selected">HUB&SPOKE</p>
+                            </div>
                         </div>
                         <div className="materials-card-body">
                             <div className="materials-card-information">
@@ -25,8 +30,8 @@ export class CreatedTraining extends Component {
                                 </div>
                             </div>
                             <div className="created-training-information">
-                                <p className="h2-style">Año</p>
-                                <p className="h2-style">Número de participantes pendientes</p>
+                                <div className="year-div">Año</div>
+                                <div className="number-participants-div">Número de participantes pendientes</div>
                             </div>
                             <div className="materials-card-materia-div">
                                 <div className="created-training-little-card">

@@ -11,19 +11,21 @@
     box-shadow: 2px 2px 5px #999;
 }
 .materials-card-header{
-    display: -webkit-box;
+    display: flex;
     font-size: 12px;
     font-weight: bold;
-    justify-content: space-between;
     width: 40%;
     margin-left: 40px;
     margin-right: 40px;
     margin-top: 40px;
     margin-bottom: 30px;
 }
+.materials-card-header-little-section{
+    display: -webkit-inline-box;
+}
 .material-card-back-button{
-    margin-left:10px;
     margin-right: 10px;
+    margin-left: 10px;
 }
 .materials-card-body{
     margin-left: 40px;

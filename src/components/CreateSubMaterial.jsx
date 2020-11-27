@@ -5,8 +5,8 @@ import { Modal } from 'react-bootstrap';
 const CreateSubMaterial = ({showStatus, toogleCreateSubMaterialModal, onChangeSubMaterial, addNewSubMaterial}) => {
   return (
     <div>
-      <div className="material-button">
-        <button type="button" className="button-material-text" onClick={toogleCreateSubMaterialModal}>Crear SubMateria</button>
+      <div className="">
+        <button type="button" className="material-button" onClick={toogleCreateSubMaterialModal}>Crear SubMateria</button>
       </div>
       <Modal show={showStatus} onHide={toogleCreateSubMaterialModal}>
         <Modal.Header closeButton>
