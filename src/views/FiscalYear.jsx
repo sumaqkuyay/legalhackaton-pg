@@ -14,64 +14,93 @@ class FiscalYear extends React.Component {
         this.state = {
             redirect: false,
             selectedFile: null,
+            selectedFileForm: null,
             jsonData: null,
-            jsonForm: null
+            jsonForm: null,
+            absent: []
         };
 
         this.onFileChange = this.onFileChange.bind(this);
         this.onFileChangeForm = this.onFileChangeForm.bind(this);
         this.onFileUpload = this.onFileUpload.bind(this);
+        this.readFile = this.readFile.bind(this);
+        this.Filterassistants = this.Filterassistants.bind(this);
     }
 
     onFileChange(event) {
         this.setState({ selectedFile: event.target.files[0] });
     }
     onFileChangeForm(event) {
-        this.setState({ selectedFile: event.target.files[0] });
+        this.setState({ selectedFileForm: event.target.files[0] });
     }
 
     onFileUpload() {
-        var f = this.state.selectedFile;
-        const reader = new FileReader();
-        reader.onload = (evt) => {
-            const bstr = evt.target.result;
-            const wb = XLSX.read(bstr, { type: "binary" });
-            const wsname = wb.SheetNames[0];
-            const ws = wb.Sheets[wsname];
-            const data = XLSX.utils.sheet_to_csv(ws, { header: 1 });
-            console.log(this.convertToJson(data)); // shows data in json format
-            this.setState({ jsonData: this.convertToJson(data) });
-        };
-        reader.readAsBinaryString(f);
+
+        let f1 = this.state.selectedFile;
+        let f2 = this.state.selectedFileForm;
+        this.readFile(f1, "requeridos");
+        this.readFile(f2, "asistentes");
+
     }
-    onFileUploadForm() {
-        var f = this.state.selectedFile;
+
+
+    readFile(file, fileType) {
+
         const reader = new FileReader();
         reader.onload = (evt) => {
+
             const bstr = evt.target.result;
             const wb = XLSX.read(bstr, { type: "binary" });
             const wsname = wb.SheetNames[0];
             const ws = wb.Sheets[wsname];
             const data = XLSX.utils.sheet_to_csv(ws, { header: 1 });
-            console.log(this.convertToJson(data)); // shows data in json format
-            this.setState({ jsonForm: this.convertToJson(data) });
+            if (fileType == "requeridos") {
+                this.setState({ jsonData: this.convertToJson(data) })
+            }
+            if (fileType == "asistentes") {
+                this.setState({ jsonForm: this.convertToJson(data) })
+            }
+            if (this.state.jsonData && this.state.jsonForm) {
+                this.setState({ absent: this.Filterassistants(this.state.jsonData, this.state.jsonForm) });
+            }
+
         };
-        reader.readAsBinaryString(f);
+        reader.readAsBinaryString(file);
+
+    }
+
+    Filterassistants(requeridos, asistidos) {
+        let absent = [];
+        for (let item1 = 0; item1 < requeridos.length; item1++) {
+            let emailreq = requeridos[item1].Email;
+            let encontrado = false;
+            for (let item2 = 0; item2 < asistidos.length; item2++) {
+                let emailasist = asistidos[item2].Email;
+                if (emailreq == emailasist) {
+                    encontrado = true
+                }
+            }
+            if (encontrado == false) {
+                absent.push(requeridos[item1])
+            }
+        }
+        return absent;
     }
 
     convertToJson(csv) {
-        var lines = csv.split("\n");
-        var result = [];
-        var headers = lines[0].split(",");
-        for (var i = 1; i < lines.length; i++) {
-            var obj = {};
-            var currentline = lines[i].split(",");
-            for (var j = 0; j < headers.length; j++) {
+        let lines = csv.split("\n");
+        let result = [];
+        let headers = lines[0].split(",");
+        for (let i = 1; i < lines.length; i++) {
+            let obj = {};
+            let currentline = lines[i].split(",");
+            for (let j = 0; j < headers.length; j++) {
                 obj[headers[j]] = currentline[j];
             }
             result.push(obj);
         }
-        return JSON.stringify(result);
+        //return JSON.stringify(result);
+        return result;
     }
 
     render() {
@@ -91,13 +120,13 @@ class FiscalYear extends React.Component {
                     <div className="Buttons-excel-container">
                         <div className="Excel-upload">
                             <img src={IconImport} alt="" />
-                            <label htmlFor="fileToUpload" className="upload"> PARTICIPANTES <br /> REQUERIDOS</label>
-                            <input type="file" className="File-to-upload" style={{ visibility: 'hidden' }} name="fileToUpload" id="fileToUpload" onChange={this.onFileChange} />
+                            <label htmlFor="fileToUpload1" className="upload"> PARTICIPANTES <br /> REQUERIDOS</label>
+                            <input type="file" className="File-to-upload" style={{ visibility: 'hidden' }} name="fileToUpload" id="fileToUpload1" onChange={this.onFileChange} />
                         </div>
                         <div className="Excel-upload">
                             <img src={IconImport} alt="" />
-                            <label htmlFor="fileToUpload" className="upload"> CARGAR LISTA DE <br /> ASISTENTES</label>
-                            <input type="file" className="File-to-upload" style={{ visibility: 'hidden' }} name="fileToUpload" id="fileToUpload" onChange={this.onFileChangeForm} />
+                            <label htmlFor="fileToUpload2" className="upload"> CARGAR LISTA DE <br /> ASISTENTES</label>
+                            <input type="file" className="File-to-upload" style={{ visibility: 'hidden' }} name="fileToUpload" id="fileToUpload2" onChange={this.onFileChangeForm} />
                         </div>
                         <div className="Excel-convert-to-json">
                             <img src={IconExport} alt="" />
@@ -119,7 +148,29 @@ class FiscalYear extends React.Component {
                         </ul>
                     </div>
                     <div className="Pending-list-box">
-
+                        {
+                            this.state.absent.map(item => (
+                                <div key={item.Email} className="Items-container">
+                                    <div className="Items-list">
+                                        <div className="Items-info">
+                                            <td>{item.Apellido}</td>
+                                        </div>
+                                        <div className="Items-info">
+                                            <td>{item.Nombre}</td>
+                                        </div>
+                                        <div className="Items-info">
+                                            <td>{item.Email}</td>
+                                        </div>
+                                        <div className="Items-info">
+                                            <td> </td>
+                                        </div>
+                                        <div className="Items-info">
+                                            <td> </td>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
             </div>

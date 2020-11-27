@@ -134,3 +134,14 @@ li {
   margin-top: 30px;
   border-top: solid 2px black;
 }
+
+.Items-list {
+  display: flex;
+  font-size: 20px;
+  margin-left: -40px;
+  justify-content: space-around;
+}
+
+.Items-info {
+  margin: 30px 87px;
+}
