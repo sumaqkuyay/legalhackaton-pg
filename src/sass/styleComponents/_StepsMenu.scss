@@ -1,5 +1,5 @@
 .button-div{
-    margin:auto;
+    margin: 10px;
     text-align: center;
 }
 .home-button{
@@ -23,14 +23,17 @@
     border: transparent;
 }
 .home-card{
-    margin-top: 50px;
-    margin-left: 400px;
-    background-color: #FFFFFF;
-    // border:2px solid red;
+    margin: auto;
+    background-color: $white;
     border-radius: 20px;
-    width: 40em;
-    height: 40em;
+    width: 44em;
+    height: 32em;
     padding: 6px;
     line-height: 1.3em;
-    text-align: center;
+}
+.home-card-text{
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 35px;
+    margin-bottom: 0px;
 }

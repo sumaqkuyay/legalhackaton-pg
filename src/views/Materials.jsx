@@ -15,10 +15,10 @@ export class Materials extends Component {
     render() {
         
       return (
-        <>
+        <div className="unaprueba">
           <aside className="sidebar">Temis, tu asistente legal</aside>
           <MaterialCard/>
-        </>
+        </div>
       );
     }
   }

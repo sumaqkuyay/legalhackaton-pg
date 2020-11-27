@@ -11,7 +11,7 @@ export class StepsMenu extends Component {
     return (
       <>
         <div className="home-card" hidden={step === 1 ? false : true }>
-          <div className="">
+          <div className="home-card-text">
             <p className="h1-style">Hola, soy Temis :) ¡Siempre dispuesta a ayudarte!</p>
             <p className="h2-style">Selecciona una entidad legal.</p>
           </div>
