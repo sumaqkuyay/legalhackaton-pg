@@ -16,7 +16,7 @@ export class MaterialCard extends Component {
             <div className="materials-card-header">
               <p>ENTRENAMIENTOS</p>
               <img src={migajita} className="material-card-back-button" alt="icon-back-form" />
-              <p className="text-selected">ENTRENAMIENTOS COORPORATIVOS</p>
+              <p className="text-selected">ENTRENAMIENTOS CORPORATIVOS</p>
             </div>
             <div className="materials-card-body">
               <div className="materials-card-information">
