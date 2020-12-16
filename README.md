@@ -1,12 +1,14 @@
-# (NOMBRE APP) USANDO react.js
-"NOMBRE APP", es un app desarrollada en react,sass usando firebase como backend. Tiene como objetivo ...
-Este producto digital permitirá ...
-A continuación detallaremos las funcionalidades y secciones de "NOMBRE APP":
+![logo](src/images/readme/logo.jpg)
+# TEMIS "TU ASISTENTE LEGAL" USANDO react.js
+"Temis" tu asistente legal, es un app desarrollada en react,sass usando firebase como backend. Tiene como objetivo que el área legal de P&G Perú agilice parte del programa de cumplimiento para mantenerse en compliance.
+Este producto digital permitirá agilizar el seguimiento de los participantes que aún están pendientes de recibir un entrenamiento. Además, Temis es tan flexible y adaptable que permitirá los abogados a crear materias y submaterias según sea la necesidad de aquellos. 
+
+A continuación detallaremos las funcionalidades y secciones de "TEMIS":
 - funcionalidad a: ...
 - funcionalidad b: ...
 
 ## Contenido del proyecto.
-Este proyecto tiene tres ramas: gh-pages, main y developer. **main** Contiene los ultimos cambios listos para desplegar **gh-pages** Es la rama donde corre el proyecto desplegado y **developer** Contiene las modificaciones que se realizan en el proyecto.
+Este proyecto tiene tres ramas: gh-pages, main y developer. **main** Contiene los ultimos cambios listos para desplegar **gh-pages** Es la rama donde corre el proyecto desplegado y **sabidevelop** Contiene las modificaciones que se realizan en el proyecto.
 
 ### VISTA A 
 Al iniciar se podrá encontrar la primera vista ...
@@ -21,7 +23,7 @@ IMAGEN.
 ...
 ## Prototipo de alta fidelidad
 
-Este es el enlace a figma : https://www.figma.com/...
+Este es el enlace a figma : https://www.figma.com/proto/uFi8yLFs6JmHdPgp1cbLuk/TemisFinal?node-id=126%3A158&scaling=min-zoom
 
 ## Prerequisitos
 
@@ -33,7 +35,7 @@ Necesitará las siguientes programas instaladas correctamente en su computadora
 - [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Demo
-Mediante este enlace podrán visualizar la demo de este proyecto desplegada en gh-pages [Demo del proyecto](https://...)
+Mediante este enlace podrán visualizar la demo de este proyecto desplegada en gh-pages [Demo del proyecto](https://sumaqkuyay.github.io/legalhackaton-pg/#/home)
 
 ## Instalación del proyecto
 Se tienen requisitos especiales,siga estos pasos.
@@ -42,7 +44,7 @@ Se tienen requisitos especiales,siga estos pasos.
 
 ## Clonar el proyecto
 ```bash
-git clone https://github.com/sumaqkuyay/mayaclientes-yanbal.git
+git clone https://github.com/sumaqkuyay/legalhackaton-pg.git
 ```
 ### Instalar las dependencias
 Para instalar las dependencias escriba lo siguiente y ejecute
